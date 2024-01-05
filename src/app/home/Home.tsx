@@ -13,11 +13,11 @@ import AsideScrollbar from "./AsideScrollbar";
 import TextReveal from "@/components/common/text_reveal/TextReveal";
 
 function HomePage() {
-  // Redirection logic for non-mobile devices
+  // Redirection logic for non-mobile devices with replace state
   useEffect(() => {
     const isNotMobile = !/iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     if (isNotMobile) {
-      window.location.href = "https://tedkoller.com/";
+      window.location.replace("https://tedkoller.com/");
     }
   }, []);
 
